@@ -11,7 +11,7 @@ Anda dapat melihat website ini secara langsung di sini:
 ---
 
 ## 📸 Tampilan Website
-![Tampilan Portfolio](https://via.placeholder.com/800x400?text=Tambahkan+Screenshot+Website+Anda+Disini)
+![Tampilan Portfolio]([https://via.placeholder.com/800x400?text=Tambahkan+Screenshot+Website+Anda+Disini](https://rikolaksono.github.io/portfolio-website/))
 *(Tips: Ganti link di atas dengan link gambar screenshot website Anda)*
 
 ---
