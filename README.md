@@ -6,7 +6,7 @@ Ini adalah website portofolio pribadi saya yang dibangun menggunakan HTML, CSS, 
 
 ## 🚀 Live Preview
 Anda dapat melihat website ini secara langsung di sini:
-👉 **[Link Website Anda - Contoh: ricolaksono.github.io](https://rikolaksono.github.io)**
+👉 **[Link Website Anda - https://rikolaksono.github.io/portfolio-website/]**
 
 ---
 
