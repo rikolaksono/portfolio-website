@@ -332,26 +332,56 @@ img {
   border-radius: 0.5rem;
 }
 
+/* Container Link/Overlay */
 .portfolio_link {
   position: absolute;
-  bottom: -100%;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  background-color: rgba(255, 255, 255, 0.2); /* Overlay putih transparan */
+  backdrop-filter: blur(10px); /* Efek blur kaca */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 0.5rem;
-  cursor: pointer;
-  backdrop-filter: blur(10px);
-  transition: 0.3s;
+  flex-direction: column; /* Menyusun teks ke bawah */
+  justify-content: center; /* Centering Vertikal */
+  align-items: center; /* Centering Horizontal */
+  text-align: center; /* Teks rata tengah */
+  padding: 1.5rem; /* Jarak teks dari pinggir kotak */
+  opacity: 0; /* Sembunyi sebelum di-hover */
+  transition: 0.4s;
 }
 
+/* Saat di-hover */
 .portfolio_img:hover .portfolio_link {
-  bottom: 0;
+  opacity: 1;
 }
 
+/* Judul Proyek */
+.portfolio_title {
+  font-size: 1.1rem;
+  color: var(--dark-color);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase; /* Membuat judul jadi huruf besar semua */
+}
+
+/* Deskripsi Singkat */
+.portfolio_description {
+  font-size: 0.85rem;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+/* Link View Detail */
 .portfolio_link-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--first-color); /* Warna biru tema */
+  text-decoration: underline;
+}
+
+.portfolio_link-name:hover {
   color: var(--dark-color);
 }
 
