@@ -219,12 +219,29 @@ img {
   height: calc(100vh - var(--header-height));
   row-gap: 5rem;
 }
+.home_scroll {
+  position: absolute;
+  left: 0.5rem; /* Jarak dari kiri */
+  bottom: 2rem; /* Jarak dari bawah, ubah ke 1rem jika ingin lebih turun lagi */
+}
+
+.home_scroll-link {
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
 .home_title {
-  align-self: flex-end;
+  /* align-self: flex-end; */
+  display: block;
+  margin-top: 6rem;
+  margin-left: 2rem;
   font-size: var(--big-font-size);
   color: var(--white-color);
-  line-height: 1;
+  line-height: 0, 9;
 }
 
 .home_title span {
@@ -247,6 +264,7 @@ img {
   right: 0;
   bottom: 0;
   width: 295px;
+  z-index: 10;
 }
 
 /* about */
@@ -411,6 +429,10 @@ img {
 
 /* media */
 @media screen and (min-width: 768px) {
+  .home_title {
+    margin-top: 3rem;
+    margin-left: 0.2rem;
+  }
   body {
     margin: 0;
   }
