@@ -360,19 +360,10 @@ img {
   row-gap: 2rem;
 }
 
-.contact_subtitle {
-  font-size: var(--normal-font-size);
-  color: var(--first-color);
-}
-
-.contact_text {
-  display: inline-block;
-  margin-bottom: var(--mb-2);
-}
-
+/* Secara default (Mobile), buat input menjadi 1 kolom saja */
 .contact_inputs {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr; /* Berubah jadi 1 kolom di HP */
   column-gap: 1rem;
 }
 
@@ -380,10 +371,27 @@ img {
   width: 100%;
   padding: 0.8rem;
   outline: none;
-  border-radius: 1.5px solid var(--dark-color);
+  /* Perbaikan Typo: Gunakan 'border' bukan 'border-radius' untuk garis tepi */
+  border: 1.5px solid var(--dark-color);
   font-size: var(--normal-font-size);
-  margin-bottom: var(--mb-4);
+  margin-bottom: var(--mb-2); /* Kurangi margin bawah di HP agar tidak terlalu renggang */
   border-radius: 0.5rem;
+}
+
+/* Responsif untuk Tablet/Desktop (Layar 768px ke atas) */
+@media screen and (min-width: 768px) {
+  .contact_container {
+    grid-template-columns: repeat(2, 1fr); /* 2 Kolom: Kiri Info, Kanan Form */
+    align-items: center;
+  }
+
+  .contact_inputs {
+    grid-template-columns: repeat(2, 1fr); /* Nama & Email sejajar hanya di desktop */
+  }
+
+  .contact_input {
+    margin-bottom: var(--mb-4);
+  }
 }
 
 .contact_button {
