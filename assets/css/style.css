@@ -372,7 +372,7 @@ img {
   padding: 0.8rem;
   outline: none;
   /* Perbaikan Typo: Gunakan 'border' bukan 'border-radius' untuk garis tepi */
-  border: 1.5px solid var(--dark-color);
+  border: 1.5px solid var(--first-color);
   font-size: var(--normal-font-size);
   margin-bottom: var(--mb-2); /* Kurangi margin bawah di HP agar tidak terlalu renggang */
   border-radius: 0.5rem;
@@ -392,6 +392,13 @@ img {
   .contact_input {
     margin-bottom: var(--mb-4);
   }
+}
+.contact_subtitle {
+  font-size: var(--normal-font-size);
+  color: var(--first-color); /* Ini akan mengubah warna menjadi biru tema */
+  font-weight: 700; /* Membuat teks lebih tebal agar jelas */
+  margin-bottom: var(--mb-1);
+  display: block; /* Memastikan teks berada di baris sendiri */
 }
 
 .contact_button {
