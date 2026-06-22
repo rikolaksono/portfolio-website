@@ -124,12 +124,12 @@
           <h3 class="contact_subtitle">Address</h3>
           <span class="contact_text">My Country</span>
         </div>
-        <form action="" class="contact_form">
+        <form name="portfolio-website-form" class="contact_form">
           <div class="contact_inputs">
-            <input type="text" placeholder="Full Name" class="contact_input" />
-            <input type="text" placeholder="Email Address" class="contact_input" />
+            <input type="text" placeholder="Full Name" class="contact_input" name="nama" />
+            <input type="text" placeholder="Email Address" class="contact_input" name="email" name="email" />
           </div>
-          <textarea name="" id="" cols="0" rows="10" placeholder="Your Message" class="contact_input"></textarea>
+          <textarea name="" id="" cols="0" rows="10" placeholder="Your Message" class="contact_input" name="pesan"></textarea>
           <input type="submit" value="Send Message" class="contact_button" />
         </form>
       </div>
@@ -162,5 +162,17 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- main js -->
     <script src="assets/js/main.js"></script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbypaGFpFUzeEqjG3MLd0_mkD76aMK4aKmMVJrr0wfCP9GArY7IhygDbl-17i4v7PLST/exec";
+      const form = document.forms["portfolio-website-form"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => response.json())
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
