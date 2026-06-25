@@ -60,12 +60,30 @@
 
         <div>
         <h2 class="about_subtitle">Riko Laksono</h2>
-        <span class="about_profesi">Product and Project Implementation</span>
-        <p class="about_text">
-          Deployment ke End User; Melakukan End to End Testing sesuai dengan bisnis Requirement; Melakukan SIT,UAT, dan PTR dengan pihak bank atau vendor; Melakukan feedback dari Team Service Operation terhadap semua Production Issues;
-          Memberikan feedback kepada Lead Engineer; Dokumentasi product yang sudah Live Production (Document Implementasi, User Guide Setting Parameter); Menjadi koordinator Product Owner; Melakukan Training product ke Team Service
-          Operation; Membuat User guide untuk Mitra/Customer.
-        </p>
+<span class="about_profesi">Product & Project Implementation</span>
+
+<p class="about_text">
+    Melaksanakan deployment produk ke end user dan memastikan implementasi berjalan sesuai kebutuhan bisnis.
+    <span id="dots">...</span>
+
+    <span id="more" style="display: none;">
+        <br><br>
+
+        • Melakukan End-to-End Testing (E2E), SIT, UAT, dan PTR bersama stakeholder, bank, maupun vendor.<br><br>
+
+        • Menangani analisis dan tindak lanjut terhadap isu produksi serta memberikan feedback kepada tim engineering.<br><br>
+
+        • Menyusun dokumentasi implementasi, konfigurasi, dan user guide produk yang telah Go-Live.<br><br>
+
+        • Berkoordinasi dengan Product Owner, tim operasional, dan stakeholder selama proses implementasi.<br><br>
+
+        • Memberikan training dan knowledge transfer kepada Team Service Operation serta mitra/customer.
+    </span>
+</p>
+
+<button id="toggleBtn" class="btn btn-primary btn-sm" onclick="toggleText()">
+    Read More
+</button>
         <div class="about_social">
           <a href="#" class="about_social-icon"><i class="bx bxl-instagram"></i></a>
           <a href="#" class="about_social-icon"><i class="bx bxl-facebook"></i></a>
@@ -248,5 +266,6 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script> function toggleText() { const dots = document.getElementById("dots"); const moreText = document.getElementById("more"); const btn = document.getElementById("toggleBtn"); if (moreText.style.display === "none") { moreText.style.display = "inline"; dots.style.display = "none"; btn.innerHTML = "Read Less"; } else { moreText.style.display = "none"; dots.style.display = "inline"; btn.innerHTML = "Read More"; } } </script>
   </body>
 </html>
